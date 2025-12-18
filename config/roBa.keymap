@@ -83,7 +83,7 @@
 &kp Q               &kp W           &kp E                        &kp R        &kp T                                                                   &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &mt LEFT_CONTROL A  &kp S           &kp D                        &kp F        &kp G                      &kp LG(K_SCREENSAVER)      &kp SEMICOLON     &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
 &mt LEFT_SHIFT Z    &mt LEFT_ALT X  &kp C                        &kp V        &kp B                      &kp LS(LG(NUMBER_4))       &kp SINGLE_QUOTE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&lt 1 LG(TAB)       &kp LEFT_ALT    &mt LEFT_COMMAND LANGUAGE_1  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_2  &lt 5 ESCAPE               &kp BACKSPACE     &lt 3 ENTER                             &kp DEL
+&lt 1 LG(TAB)       &kp LEFT_ALT    &mt LEFT_COMMAND LANGUAGE_2  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &lt 5 ESCAPE               &kp BACKSPACE     &lt 3 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
