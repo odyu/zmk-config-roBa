@@ -80,10 +80,10 @@
 
         MAC {
             bindings = <
-&kp Q               &kp W        &kp E           &kp R                   &kp T                                                              &kp Y      &kp U  &lt 5 I    &kp O    &kp P
-&mt LEFT_CONTROL A  &kp S        &kp D           &kp F                   &kp G                   &kp LG(SPACE)               &kp MINUS      &kp H      &kp J  &kp K      &kp L    &mt RIGHT_SHIFT SEMICOLON
-&mt LEFT_SHIFT Z    &kp X        &kp C           &kp V                   &kp B                   &kp ESCAPE                  &kp SEMICOLON  &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&lt 1 LG(TAB)       &lt 2 LG(A)  &lt 3 LEFT_ALT  &mt LEFT_COMMAND LANG2  &lt_to_layer_0 6 SPACE  &mt LEFT_CONTROL LANG1      &kp BACKSPACE  &kp ENTER                             &kp DEL
+&kp Q               &kp W                        &kp E                        &kp R        &kp T                                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&mt LEFT_CONTROL A  &kp S                        &kp D                        &kp F        &kp G                  &kp LG(K_SCREENSAVER)            &kp EQUAL              &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z    &mt LEFT_ALT X               &kp C                        &kp V        &kp B                  &kp LS(LG(NUMBER_4))             &kp LS(DOUBLE_QUOTES)  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&lt 1 LG(TAB)       &mt LEFT_ALT LG(LANGUAGE_1)  &mt LEFT_COMMAND LANGUAGE_1  &lt 2 SPACE  &mt LEFT_SHIFT ESCAPE  &mt LEFT_CONTROL LG(ESCAPE)      &kp BACKSPACE          &lt 3 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
