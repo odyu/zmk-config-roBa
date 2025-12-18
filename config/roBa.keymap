@@ -86,7 +86,7 @@
 &lt 1 LG(TAB)       &kp LEFT_ALT    &mt LEFT_COMMAND LANGUAGE_1  &lt 2 SPACE  &mt LEFT_SHIFT ESCAPE  &mt LEFT_CONTROL LG(ESCAPE)      &kp BACKSPACE     &lt 3 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>, <&inc_dec_kp 0 0>;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         FUNCTION {
