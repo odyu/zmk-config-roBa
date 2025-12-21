@@ -80,21 +80,21 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W         &kp E         &kp R                        &kp T                                                             &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&mt LEFT_CONTROL A  &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(NUMBER_4))               &kp MINUS         &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z    &kp X         &kp C         &kp V                        &kp B        &lt 5 LANGUAGE_2                   &lt 4 LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL           &kp LEFT_ALT  &kp LEFT_GUI  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE     &lt 1 ENTER                             &kp DEL
+&kp Q               &kp W         &kp E         &kp R        &kp T                                                  &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&mt LEFT_CONTROL A  &kp S         &kp D         &kp F        &kp G      &kp LS(LG(NUMBER_4))      &kp MINUS         &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z    &kp X         &kp C         &kp V        &kp B      &lt 5 LANGUAGE_2          &lt 1 LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL           &kp LEFT_ALT  &kp LEFT_GUI  &lt 6 SPACE  &lt 2 TAB  &lt 3 ESCAPE              &kp BACKSPACE     &lt 3 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        FUNCTION {
+        FUNCTION_AND_NUM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
+&kp F1   &kp F2   &kp F3   &kp F4   &kp F5                          &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTERISK
+&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans      &trans     &kp MINUS  &kp N4  &kp N5  &kp N6  &kp FSLH
+&kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans      &kp EQUAL  &kp N0     &kp N1  &kp N2  &kp N3  &trans
+&trans   &trans   &trans   &trans   &trans   &trans      &trans     &trans                             &trans
             >;
         };
 
@@ -109,10 +109,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp ESCAPE  &kp LA(RIGHT_ARROW)           &kp LA(RIGHT)  &kp LC(TAB)  &trans                                  &trans    &kp HOME      &kp PAGE_UP     &trans           &trans
+&trans      &trans                        &trans         &trans       &trans              &trans      &trans  &kp LEFT  &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LA(RIGHT_ARROW)
+&trans      &kp LG(LS(LEFT_PARENTHESIS))  &trans         &trans       &kp LA(LEFT_ARROW)  &trans      &trans  &trans    &kp END       &kp PAGE_DOWN   &trans           &trans
+&trans      &trans                        &trans         &trans       &trans              &trans      &trans  &trans                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -127,12 +127,12 @@
             >;
         };
 
-        SCROLL {
+        SYMBOL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp GRAVE  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                      &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp MINUS  &kp PLUS
+&trans     &trans       &trans    &trans      &trans       &trans      &trans  &trans     &trans         &trans        &trans     &trans
+&trans     &trans       &trans    &trans      &trans       &trans      &trans  &trans     &trans         &trans        &trans     &kp QUESTION
+&trans     &trans       &trans    &trans      &trans       &trans      &trans  &trans                                             &trans
             >;
         };
 
