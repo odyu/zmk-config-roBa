@@ -86,7 +86,7 @@
 &kp LCTRL           &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 TAB  &lt 1 SPACE  &lt 3 ESCAPE              &kp BACKSPACE     &lt 3 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         FUNCTION_AND_NUM {
