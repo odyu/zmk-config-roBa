@@ -31,7 +31,7 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <11 10>;
         };
 
         shift_tab {
@@ -95,10 +95,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W         &kp E         &kp R             &kp T                                                    &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&mt LEFT_CONTROL A  &kp S         &kp D         &kp F             &kp G        &kp LS(LG(NUMBER_4))      &kp MINUS         &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z    &kp X         &kp C         &kp V             &kp B        &lt 2 LANGUAGE_2          &lt 2 LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL           &kp LEFT_ALT  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE  &lt 3 ESCAPE              &kp BACKSPACE     &lt 3 ENTER                             &kp DEL
+&kp Q               &kp W             &kp E         &kp R             &kp T                                                    &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&mt LEFT_CONTROL A  &kp S             &kp D         &kp F             &kp G        &kp LS(LG(NUMBER_4))      &kp MINUS         &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z    &kp X             &kp C         &kp V             &kp B        &lt 2 LANGUAGE_2          &lt 2 LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&lt 1 CAPSLOCK      &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 2 SPACE  &lt 3 ESCAPE              &kp BACKSPACE     &lt 3 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
@@ -115,9 +115,9 @@
 
         SYMBOL {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR      &kp PERCENT                              &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
-&kp LCTRL        &kp AMPERSAND  &kp ASTERISK  &kp MINUS       &kp PLUS     &trans      &kp UNDERSCORE  &kp EXCLAMATION    &kp BACKSLASH     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COLON
-&kp GRAVE        &kp TILDE      &trans        &kp UNDERSCORE  &kp EQUAL    &trans      &trans          &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION
+&kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR      &kp PERCENT                              &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp PIPE
+&kp LCTRL        &kp AMPERSAND  &kp ASTERISK  &kp MINUS       &kp PLUS     &trans      &kp UNDERSCORE  &kp EXCLAMATION    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp GRAVE        &kp TILDE      &trans        &kp UNDERSCORE  &kp EQUAL    &trans      &trans          &kp DOUBLE_QUOTES  &kp LESS_THAN         &kp GREATER_THAN       &kp GREATER_THAN  &kp QUESTION
 &trans           &trans         &trans        &trans          &trans       &trans      &trans          &trans                                                                            &trans
             >;
         };
