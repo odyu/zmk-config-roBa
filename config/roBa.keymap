@@ -70,12 +70,12 @@
         };
 
         to_mac_layer {
-            bindings = <&to 0>;
+            bindings = <&to_mac>;
             key-positions = <10 11 12 13>;
         };
 
         to_omarchy_layer {
-            bindings = <&tog 6>;
+            bindings = <&to_omarchy>;
             key-positions = <18 19 20 21>;
         };
     };
@@ -93,6 +93,20 @@
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_2 &kp ESCAPE>;
             label = "VIM_ESC";
+        };
+
+        to_omarchy: to_omarchy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &tog 6>;
+            label = "TO_OMARCHY";
+        };
+
+        to_mac: to_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "TO_MAC";
         };
     };
 
