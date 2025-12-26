@@ -186,10 +186,10 @@
 
         OMARCHY {
             bindings = <
-&trans  &trans        &trans        &trans            &trans                                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans            &trans  &kp LS(LG(NUMBER_4))      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans            &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &trans  &trans                    &trans  &trans                          &trans
+&trans  &trans        &trans        &trans            &trans                                              &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans            &trans  &kp LS(LG(NUMBER_4))      &trans            &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans            &trans  &lt 1 INT_MUHENKAN        &lt 1 INT_HENKAN  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &trans  &trans                    &trans            &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(LEFT_ARROW) LG(RIGHT_ARROW)>;
