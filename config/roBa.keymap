@@ -194,5 +194,25 @@
 
             sensor-bindings = <&inc_dec_kp LG(LEFT_ARROW) LG(RIGHT_ARROW)>;
         };
+
+        OMARCHY_ARROW {
+            bindings = <
+&trans           &trans  &trans  &trans       &trans                      &kp LG(LS(NUMBER_1))  &kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans
+&kp LG(LS(TAB))  &trans  &trans  &kp LG(TAB)  &trans  &trans      &trans  &trans                &trans                &trans                &trans                &trans
+&trans           &trans  &trans  &trans       &trans  &trans      &trans  &trans                &trans                &trans                &trans                &trans
+&trans           &trans  &trans  &trans       &trans  &trans      &trans  &trans                                                                                  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        OMARCHY_ARROW {
+            if-layers = <6 3>;
+            then-layer = <7>;
+        };
     };
 };
