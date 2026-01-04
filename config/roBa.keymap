@@ -194,7 +194,7 @@
 &trans  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &trans  &trans                    &trans            &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(LEFT_ARROW) LG(RIGHT_ARROW)>;
+            sensor-bindings = <&inc_dec_kp LS(LG(TAB)) LG(TAB)>;
         };
 
         OMARCHY_ARROW {
