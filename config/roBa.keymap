@@ -98,7 +98,7 @@
         to_omarchy: to_omarchy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &tog 6>;
+            bindings = <&bt BT_SEL 1 &to 0 &tog 6>;
             label = "TO_OMARCHY";
         };
 
