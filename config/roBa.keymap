@@ -126,7 +126,7 @@
            label = "ENCODER_MSC_DOWN_UP";
            #sensor-binding-cells = <0>;
            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-           tap-ms = <1>;
+           tap-ms = <20>;
        };
     };
 
