@@ -125,7 +125,7 @@
        encoder_msc_down_up: encoder_msc_down_up {
            compatible = "zmk,behavior-sensor-rotate";
            label = "ENCODER_MSC_DOWN_UP";
-           #sensor-binding-cells = <0>;
+           #sensor-binding-cells = <2>;
            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
            tap-ms = <20>;
        };
