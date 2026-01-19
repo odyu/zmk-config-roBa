@@ -158,7 +158,7 @@
         SYMBOL {
             bindings = <
 &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                         &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL         &kp NON_US_BACKSLASH
-&kp GRAVE        &kp TILDE    &trans    &trans      &kp CARET    &trans      &kp CARET  &kp AMPERSAND      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON     &kp SQT
+&kp GRAVE        &kp TILDE    &trans    &trans      &kp CARET    &trans      &kp CARET  &kp AMPERSAND      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON     &kp SQT
 &trans           &trans       &trans    &trans      &trans       &trans      &trans     &kp DOUBLE_QUOTES  &kp LESS_THAN         &kp GREATER_THAN       &kp GREATER_THAN  &kp QUESTION
 &trans           &trans       &trans    &trans      &trans       &trans      &trans     &trans                                                                            &trans
             >;
