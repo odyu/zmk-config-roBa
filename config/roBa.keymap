@@ -119,6 +119,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        encoder_msc_left_right: encoder_msc_left_right {
+            compatible = "zmk,behavior-sensor-rotate";
+            #binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -132,7 +139,7 @@
 &lt 5 LG(SPACE)     &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 1 SPACE  &vim_esc                  &kp BACKSPACE     &lt 3 ENTER                             &lt 5 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(LEFT_ARROW) LG(RIGHT_ARROW)>;
+            sensor-bindings = <&encoder_msc_left_right>;
         };
 
         NUM {
