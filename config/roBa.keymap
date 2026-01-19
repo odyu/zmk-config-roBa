@@ -160,8 +160,6 @@
 &trans              &kp LG(LS(LEFT_PARENTHESIS))  &trans              &trans               &kp LA(LEFT_ARROW)  &trans      &trans  &trans    &kp PAGE_DOWN   &kp PAGE_UP   &trans           &trans
 &trans              &trans                        &trans              &trans               &trans              &trans      &trans  &trans                                                   &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
@@ -171,8 +169,6 @@
 &trans           &trans            &trans           &trans            &kp LG(MINUS)  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans           &trans            &trans           &trans            &trans         &trans      &trans  &trans                                &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP C_AC_SCROLL_UP>;
         };
 
         SYSTEM {
@@ -191,8 +187,6 @@
 &trans  &trans        &trans  &trans            &trans  &lt 2 INT_MUHENKAN       &lt 2 INT_HENKAN  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_WIN  &trans  &kp LEFT_CONTROL  &trans  &trans                   &trans            &trans                          &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LS(LG(TAB)) LG(TAB)>;
         };
 
         OMARCHY_ARROW {
@@ -202,8 +196,6 @@
 &trans           &trans  &trans  &trans       &trans  &trans      &trans  &trans                &trans                &trans                &trans                &trans
 &trans           &trans  &trans  &trans       &trans  &trans      &trans  &trans                                                                                  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
     };
 
