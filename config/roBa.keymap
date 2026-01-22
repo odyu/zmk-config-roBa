@@ -148,8 +148,8 @@
 
         NUM {
             bindings = <
-&kp LG(LS(NUMBER_1))  &kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(NUMBER_5))                         &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp EQUAL
-&kp LG(NUMBER_1)      &kp LG(NUMBER_2)      &kp LG(NUMBER_3)      &kp LG(NUMBER_4)      &kp LG(NUMBER_5)      &trans      &kp MINUS  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp FSLH
+&kp LA(LS(NUMBER_1))  &kp LA(LS(NUMBER_2))  &kp LS(LA(NUMBER_3))  &kp LS(LA(NUMBER_4))  &kp LS(LA(NUMBER_5))                         &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp EQUAL
+&kp LA(NUMBER_1)      &kp LA(NUMBER_2)      &kp LG(NUMBER_3)      &kp LA(NUMBER_4)      &kp LG(NUMBER_5)      &trans      &kp MINUS  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp FSLH
 &trans                &trans                &trans                &trans                &trans                &trans      &trans     &kp N0     &kp N1  &kp N2  &kp N3  &kp PERIOD
 &trans                &trans                &trans                &trans                &trans                &trans      &trans     &trans                             &trans
             >;
@@ -166,19 +166,19 @@
 
         ARROW {
             bindings = <
-&trans              &kp LA(RIGHT_ARROW)           &kp LA(RIGHT)       &kp LC(TAB)          &trans                                  &trans    &kp END         &kp HOME      &trans           &trans
-&kp LC(LEFT_ARROW)  &kp LC(UP_ARROW)              &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans              &trans      &trans  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp LA(RIGHT_ARROW)
-&trans              &kp LG(LS(LEFT_PARENTHESIS))  &trans              &trans               &kp LA(LEFT_ARROW)  &trans      &trans  &trans    &kp PAGE_DOWN   &kp PAGE_UP   &trans           &trans
-&trans              &trans                        &trans              &trans               &trans              &trans      &trans  &trans                                                   &trans
+&trans              &kp LG(RIGHT_ARROW)  &kp LG(RIGHT)       &kp LC(TAB)          &trans                                  &trans    &kp END         &kp HOME      &trans           &trans
+&kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)     &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans              &trans      &trans  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+&trans              &trans               &trans              &trans               &kp LG(LEFT_ARROW)  &trans      &trans  &trans    &kp PAGE_DOWN   &kp PAGE_UP   &trans           &trans
+&trans              &trans               &trans              &trans               &trans              &trans      &trans  &trans                                                   &trans
             >;
         };
 
         MOUSE {
             bindings = <
-&trans           &trans            &trans           &trans            &trans                             &trans  &trans    &trans    &trans    &trans
-&msc MOVE_X(15)  &msc MOVE_Y(-15)  &msc MOVE_Y(15)  &msc MOVE_X(-15)  &kp LG(PLUS)   &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans           &trans            &trans           &trans            &kp LG(MINUS)  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans           &trans            &trans           &trans            &trans         &trans      &trans  &trans                                &trans
+&trans           &trans            &trans           &trans            &trans                      &trans  &trans    &trans    &trans    &trans
+&msc MOVE_X(15)  &msc MOVE_Y(-15)  &msc MOVE_Y(15)  &msc MOVE_X(-15)  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans           &trans            &trans           &trans            &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans           &trans            &trans           &trans            &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
@@ -202,10 +202,10 @@
 
         OMARCHY_ARROW {
             bindings = <
-&trans           &trans  &trans  &trans       &trans                      &kp LG(LS(NUMBER_1))  &kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &trans
-&kp LG(LS(TAB))  &trans  &trans  &kp LG(TAB)  &trans  &trans      &trans  &trans                &trans                &trans                &trans                &trans
-&trans           &trans  &trans  &trans       &trans  &trans      &trans  &trans                &trans                &trans                &trans                &trans
-&trans           &trans  &trans  &trans       &trans  &trans      &trans  &trans                                                                                  &trans
+&trans           &kp LA(RIGHT_ARROW)  &kp LA(RIGHT_ARROW)  &trans       &trans                                  &trans  &trans  &trans  &trans  &trans
+&kp LS(LA(TAB))  &trans               &trans               &kp LA(TAB)  &trans              &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &trans               &trans               &trans       &kp LA(LEFT_ARROW)  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &trans               &trans               &trans       &trans              &trans      &trans  &trans                          &trans
             >;
         };
     };
