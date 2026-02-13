@@ -193,10 +193,10 @@
 
         OMARCHY {
             bindings = <
-&trans           &trans            &trans        &trans            &trans                                             &trans  &trans  &trans  &trans  &trans
-&trans           &trans            &trans        &trans            &trans  &kp LS(PRINTSCREEN)      &trans            &trans  &trans  &trans  &trans  &trans
-&trans           &trans            &trans        &trans            &trans  &lt 2 INT_MUHENKAN       &lt 2 INT_HENKAN  &trans  &trans  &trans  &trans  &trans
-&lt 5 LA(SPACE)  &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_CONTROL  &trans  &trans                   &trans            &trans                          &trans
+&trans           &trans  &trans  &trans  &trans                                             &trans  &trans  &trans  &trans  &trans
+&trans           &trans  &trans  &trans  &trans  &kp LS(PRINTSCREEN)      &trans            &trans  &trans  &trans  &trans  &trans
+&trans           &trans  &trans  &trans  &trans  &lt 2 INT_MUHENKAN       &lt 2 INT_HENKAN  &trans  &trans  &trans  &trans  &trans
+&lt 5 LG(SPACE)  &trans  &trans  &trans  &trans  &trans                   &trans            &trans                          &trans
             >;
         };
 
