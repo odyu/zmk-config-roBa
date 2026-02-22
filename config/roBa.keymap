@@ -66,40 +66,14 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
-
-        f6_jetbrains_fnction {
-            bindings = <&kp LS(F6)>;
-            key-positions = <3 4>;
-        };
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-
         vim_esc: vim_esc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LANGUAGE_2 &kp ESCAPE>;
             label = "VIM_ESC";
-        };
-
-        to_omarchy: to_omarchy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 0 &tog 0>;
-            label = "TO_OMARCHY";
-        };
-
-        to_mac: to_mac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &to 0>;
-            label = "TO_MAC";
         };
     };
 
@@ -141,10 +115,10 @@
 
         NUM {
             bindings = <
-&kp LA(LS(NUMBER_1))  &kp LA(LS(NUMBER_2))  &kp LS(LA(NUMBER_3))  &kp LS(LA(NUMBER_4))  &kp LS(LA(NUMBER_5))                         &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH
-&kp LA(NUMBER_1)      &kp LA(NUMBER_2)      &kp LA(NUMBER_3)      &kp LA(NUMBER_4)      &kp LG(NUMBER_5)      &trans      &kp MINUS  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTERISK
-&trans                &trans                &trans                &trans                &trans                &trans      &trans     &kp N0     &kp N1  &kp N2  &kp N3  &kp PERIOD
-&trans                &trans                &trans                &trans                &trans                &trans      &trans     &trans                             &trans
+&trans  &trans  &trans  &trans  &trans                      &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTERISK
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp N0     &kp N1  &kp N2  &kp N3  &kp PERIOD
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                             &trans
             >;
         };
 
@@ -187,7 +161,7 @@
         FUNCTION {
             bindings = <
 &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                               &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans      &bt BT_CLR      &trans        &bt BT_NXT    &bt BT_PRV    &trans        &trans
+&trans   &trans   &trans   &trans   &kp F10  &trans      &bt BT_CLR      &trans        &bt BT_NXT    &bt BT_PRV    &trans        &trans
 &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans      &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans
 &trans   &trans   &trans   &trans   &trans   &trans      &trans          &trans                                                  &trans
             >;
@@ -203,12 +177,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        OMARCHY_ARROW {
-            if-layers = <8 3>;
-            then-layer = <9>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
