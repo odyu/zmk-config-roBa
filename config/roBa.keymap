@@ -75,6 +75,13 @@
             bindings = <&kp LANGUAGE_2 &kp ESCAPE>;
             label = "VIM_ESC";
         };
+
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0>;
+            label = "TO_LAYER_0";
+        };
     };
 
     behaviors {
