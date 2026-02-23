@@ -138,6 +138,8 @@
 &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans      &trans  &trans    &trans          &trans        &trans           &kp PAGE_DOWN
 &trans              &trans            &trans              &trans               &trans  &trans      &trans  &trans                                                   &kp END
             >;
+
+            sensor-bindings = <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
         };
 
         WINDOW {
