@@ -111,8 +111,8 @@
 
         DEFAULT {
             bindings = <
-&kp Q               &kp W         &kp E             &kp R        &kp T                                                    &kp Y        &kp U  &lt 2 I    &kp O    &kp P
-&mt LEFT_CONTROL A  &kp S         &kp D             &kp F        &kp G        &kp LS(LG(NUMBER_4))      &kp B             &kp H        &kp J  &kp K      &kp L    &lt 1 SEMICOLON
+&kp Q               &kp W         &kp E             &kp R        &kp T                                                    &kp Y        &kp U  &kp I      &kp O    &kp P
+&mt LEFT_CONTROL A  &kp S         &kp D             &kp F        &kp G        &kp LS(LG(NUMBER_4))      &kp B             &kp H        &kp J  &lt 2 K    &kp L    &lt 1 SEMICOLON
 &mt LEFT_SHIFT Z    &kp X         &kp C             &kp V        &kp B        &lt 5 LANGUAGE_2          &lt 4 LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &lt 7 LG(SPACE)     &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 6 SPACE  &lt 5 SPACE  &vim_esc                  &kp BACKSPACE     &lt 3 ENTER                             &lt 8 DELETE
             >;
