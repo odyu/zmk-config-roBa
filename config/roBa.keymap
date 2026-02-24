@@ -109,15 +109,38 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        DEFAULT {
             bindings = <
-&kp Q               &kp W         &kp E             &kp R        &kp T                                                    &kp Y        &kp U  &kp I      &kp O    &kp P
-&mt LEFT_CONTROL A  &kp S         &kp D             &kp F        &kp G        &kp LS(LG(NUMBER_4))      &kp B             &kp H        &kp J  &kp K      &kp L    &lt 5 SEMICOLON
-&mt LEFT_SHIFT Z    &kp X         &kp C             &kp V        &kp B        &lt 3 LANGUAGE_2          &lt 3 LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&lt 7 LG(SPACE)     &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 4 SPACE  &lt 3 SPACE  &vim_esc                  &lt 2 BACKSPACE   &lt 1 ENTER                             &kp BACKSPACE
+&kp Q               &kp W         &kp E             &kp R        &kp T                                                    &kp Y        &kp U  &lt 2 I    &kp O    &kp P
+&mt LEFT_CONTROL A  &kp S         &kp D             &kp F        &kp G        &kp LS(LG(NUMBER_4))      &kp B             &kp H        &kp J  &kp K      &kp L    &lt 1 SEMICOLON
+&mt LEFT_SHIFT Z    &kp X         &kp C             &kp V        &kp B        &lt 5 LANGUAGE_2          &lt 4 LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&lt 7 LG(SPACE)     &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 6 SPACE  &lt 5 SPACE  &vim_esc                  &kp BACKSPACE     &lt 3 ENTER                             &kp DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
+            label = "Default";
+        };
+
+        MOUSE {
+            bindings = <
+&trans           &trans            &trans           &trans            &trans                      &trans  &trans    &trans    &trans    &trans
+&msc MOVE_X(15)  &msc MOVE_Y(-15)  &msc MOVE_Y(15)  &msc MOVE_X(-15)  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans           &trans            &trans           &trans            &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans           &trans            &trans           &trans            &trans  &trans      &trans  &trans                                &trans
+            >;
+
+            label = "Move cursor";
+        };
+
+        SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+
+            label = "Move scroll";
         };
 
         ARROW {
@@ -129,41 +152,35 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
+            label = "Arrow keys";
         };
 
         NUM {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN   &kp POUND     &kp DOLLAR    &kp PERCENT                         &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS     &kp PLUS
-&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &trans      &kp EQUAL  &kp NUMBER_6  &kp NUMBER_7          &kp NUMBER_8           &kp NUMBER_9  &kp NUMBER_0
-&trans           &trans        &trans        &trans        &trans       &trans      &trans     &trans        &trans                &trans                 &trans        &kp SLASH
-&trans           &trans        &trans        &trans        &trans       &trans      &trans     &trans                                                                   &trans
+&kp EXCLAMATION  &kp AT_SIGN   &kp POUND     &kp DOLLAR    &kp PERCENT                      &kp AMPERSAND  &kp ASTERISK  &kp MINUS     &kp PLUS      &kp EQUAL
+&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &trans      &trans  &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+&trans           &trans        &trans        &trans        &trans       &trans      &trans  &trans         &trans        &trans        &trans        &kp SLASH
+&trans           &trans        &trans        &trans        &trans       &trans      &trans  &trans                                                   &trans
             >;
+
+            label = "Number keys";
         };
 
         SYMBOL {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS          &kp EQUAL         &kp BACKSLASH
-&kp GRAVE        &trans       &trans    &trans      &kp CARET    &trans      &kp AMPERSAND  &kp ASTERISK          &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &kp SEMICOLON     &kp SINGLE_QUOTE
-&trans           &trans       &trans    &trans      &trans       &trans      &trans         &trans                &trans                 &kp LESS_THAN      &kp GREATER_THAN  &mt RIGHT_SHIFT SLASH
-&trans           &trans       &trans    &trans      &trans       &trans      &trans         &trans                                                                            &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                      &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&kp GRAVE        &trans       &trans    &trans      &kp CARET    &trans      &trans  &trans         &kp SINGLE_QUOTE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON
+&trans           &trans       &trans    &trans      &trans       &trans      &trans  &trans         &trans            &kp LESS_THAN         &kp GREATER_THAN       &mt RIGHT_SHIFT SLASH
+&trans           &trans       &trans    &trans      &trans       &trans      &trans  &trans                                                                        &trans
             >;
         };
 
-        WINDOW {
+        COMMAND {
             bindings = <
-&kp LA(LEFT_ARROW)  &kp LA(UP_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &trans                      &trans  &trans  &trans  &trans  &trans
-&kp LC(LEFT_ARROW)  &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans              &trans            &trans              &trans               &trans  &trans      &trans  &trans                          &trans
-            >;
-        };
-
-        MOUSE {
-            bindings = <
-&trans           &trans            &trans           &trans            &trans                      &trans  &trans    &trans    &trans    &trans
-&msc MOVE_X(15)  &msc MOVE_Y(-15)  &msc MOVE_Y(15)  &msc MOVE_X(-15)  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans           &trans            &trans           &trans            &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans           &trans            &trans           &trans            &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
@@ -178,10 +195,10 @@
 
         SYSTEM {
             bindings = <
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans                &trans                &trans             &kp LG(ESCAPE)   &trans  &trans      &bt BT_CLR      &trans        &bt BT_NXT    &bt BT_PRV    &trans        &trans
-&trans                &trans                &trans             &trans           &trans  &trans      &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans
-&trans                &trans                &trans             &trans           &trans  &trans      &trans          &trans                                                  &trans
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_SCREENSAVER                              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans                &trans                &trans             &trans           &trans             &trans      &bt BT_CLR      &trans        &bt BT_NXT    &bt BT_PRV    &trans        &trans
+&trans                &trans                &trans             &trans           &trans             &trans      &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans
+&trans                &trans                &trans             &trans           &trans             &trans      &trans          &trans                                                  &trans
             >;
         };
     };
