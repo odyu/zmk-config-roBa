@@ -180,10 +180,10 @@
 
         COMMAND {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp LA(LS(NUMBER_1))  &kp LA(LS(NUMBER_2))  &kp LS(LA(NUMBER_3))  &kp LA(LS(NUMBER_4))  &kp LS(LA(NUMBER_5))                         &kp LS(LA(NUMBER_6))  &kp LS(LA(NUMBER_7))  &kp LS(LA(NUMBER_8))  &kp LS(LA(NUMBER_9))  &kp LS(LA(NUMBER_0))
+&kp LA(NUMBER_1)      &kp LA(NUMBER_2)      &kp LA(NUMBER_3)      &kp LA(NUMBER_4)      &kp LA(NUMBER_5)      &trans      &trans     &kp LA(NUMBER_6)      &kp LA(NUMBER_7)      &kp LA(NUMBER_8)      &kp LA(NUMBER_9)      &kp LA(NUMBER_0)
+&trans                &trans                &trans                &trans                &trans                &trans      &kp LA(F)  &kp LA(LEFT_ARROW)    &kp LA(DOWN_ARROW)    &kp LA(UP_ARROW)      &kp LA(RIGHT_ARROW)   &kp LA(SLASH)
+&trans                &trans                &trans                &trans                &trans                &trans      &trans     &trans                                                                                  &trans
             >;
         };
 
