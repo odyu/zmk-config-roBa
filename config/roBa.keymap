@@ -83,6 +83,20 @@
             bindings = <&to 0>;
             label = "TO_LAYER_0";
         };
+
+        lang2_mo4: lang2_mo4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &mo 4>;
+            label = "LANG2_MO4";
+        };
+
+        lang2_mo5: lang2_mo5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &mo 5>;
+            label = "LANG2_MO5";
+        };
     };
 
     behaviors {
@@ -105,6 +119,26 @@
 
             tap-ms = <20>;
         };
+
+        ht_lang2_mo4: ht_lang2_mo4 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_LANG2_MO4";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&lang2_mo4>, <&kp>;
+        };
+
+        ht_lang2_mo5: ht_lang2_mo5 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_LANG2_MO5";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&lang2_mo5>, <&kp>;
+        };
     };
 
     keymap {
@@ -114,8 +148,8 @@
             bindings = <
 &kp Q               &kp W         &kp E             &kp R        &kp T                                                    &kp Y        &kp U  &kp I      &kp O    &kp P
 &mt LEFT_CONTROL A  &kp S         &kp D             &kp F        &kp G        &kp LS(LG(NUMBER_4))      &kp B             &kp H        &kp J  &lt 2 K    &kp L    &lt 1 SEMICOLON
-&mt LEFT_SHIFT Z    &kp X         &kp C             &kp V        &kp B        &lt 5 LANGUAGE_2          &lt 4 LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&lt 7 LG(SPACE)     &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 6 SPACE  &lt 5 SPACE  &vim_esc                  &kp BACKSPACE     &lt 3 ENTER                             &lt 8 DELETE
+&mt LEFT_SHIFT Z    &kp X         &kp C             &kp V        &kp B        &lt 5 LANGUAGE_2          &ht_lang2_mo4 0 LANGUAGE_2  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&lt 7 LG(SPACE)     &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 6 SPACE  &ht_lang2_mo5 0 SPACE  &vim_esc                  &kp BACKSPACE     &lt 3 ENTER                             &lt 8 DELETE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
