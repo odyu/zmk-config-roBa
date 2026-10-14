@@ -175,6 +175,17 @@
             tap-ms = <20>;
         };
 
+        // ガリガリローラー: AeroSpaceのワークスペースを順に移動
+        // cw(=手前/下)で次へ(alt+ctrl+n) / ccw(=奥/上)で前へ(alt+ctrl+p)
+        encoder_ws_cycle: encoder_ws_cycle {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_WS_CYCLE";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(LA(N))>, <&kp LC(LA(P))>;
+
+            tap-ms = <20>;
+        };
+
         ht_lang2_mo4: ht_lang2_mo4 {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_LANG2_MO4";
@@ -207,7 +218,7 @@
 &lt 8 LG(SPACE)     &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 5 SPACE  &lt 6 SPACE  &lt 7 ESCAPE              &kp BACKSPACE     &lt 3 ENTER                             &lt 9 DELETE
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_ws_cycle>;
             label = "Default";
         };
 
@@ -241,7 +252,6 @@
 &trans              &trans            &trans              &trans               &trans  &trans      &trans      &trans                                                   &kp END
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
             label = "Arrow";
         };
 
