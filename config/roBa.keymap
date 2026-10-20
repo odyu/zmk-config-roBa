@@ -175,6 +175,20 @@
             tap-ms = <20>;
         };
 
+        // ガリガリローラー: AeroSpaceのワークスペースを順に移動
+        // 手前=次へ(alt+ctrl+n) / 奥=前へ(alt+ctrl+p)
+        // ※ bindings は 1つ目=cw, 2つ目=ccw。実機で逆なら2つを入れ替える
+        // ※ 1クリックあたりの移動量は roBa.dtsi の steps / triggers-per-rotation で調整
+        //   （現在は 1クリック=1ワークスペース）
+        encoder_ws_cycle: encoder_ws_cycle {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_WS_CYCLE";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(LA(P))>, <&kp LC(LA(N))>;
+
+            tap-ms = <20>;
+        };
+
         ht_lang2_mo4: ht_lang2_mo4 {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_LANG2_MO4";
@@ -207,7 +221,7 @@
 &lt 8 LG(SPACE)     &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 5 SPACE  &lt 6 SPACE  &lt 7 ESCAPE              &kp BACKSPACE     &lt 3 ENTER                             &lt 9 DELETE
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_ws_cycle>;
             label = "Default";
         };
 
@@ -241,7 +255,6 @@
 &trans              &trans            &trans              &trans               &trans  &trans      &trans      &trans                                                   &kp END
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(TAB) LG(LS(TAB))>;
             label = "Arrow";
         };
 

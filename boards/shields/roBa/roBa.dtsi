@@ -98,7 +98,10 @@
         compatible = "alps,ec11";
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <24>;
+        // 1デテント=4パルスのEC11。triggers-per-rotation=10 に対し steps=40 で
+        //「1クリック=1発火」になり、AeroSpace の隣のワークスペースへ確実に移動できる。
+        // さらにゆっくりにしたい場合は steps を増やす（例: 80 で2クリック=1移動）。
+        steps = <40>;
         status = "disabled";
     };
 
